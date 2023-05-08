@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+<body>
+    <script>
+        //Aqui é um comentário de uma linha em JavaScript
+
+        /* Aqui é um cometrário em mais de 
+        uma linha*/
+
+        //alert('Olá Mundo!');
+        //alert('Meu segundo alerta, virou bagunça');
+
+        document.write('<h1>Olá Mundo! </h1>');
+        document.write('<p>Escrevendo no documento</p>');
+        document.write(25);
+        document.write('<br>');
+        document.write(9*8*7);
+        document.write('<br>');
+        document.writeln(25+25);
+        document.write('<br>');
+        document.writeln('25'+'25');
+    </script>
+
+    <h2>Pedindo informação para o usuário</h2>
+
+    <script>
+        //Comando confirm
+        confirm('deseja excluir?')
+        //Variáveis
+
+        var ano = 2023;
+        var nome = 'Tainara';
+
+        document.write('Meu nome é: '+ nome +' e estamos em ' + ano);
+
+        var nome2 = prompt('Digite seu nome: ');
+
+        document.write('Olá, ' + nome2);
+
+        var notadepoisdazoacao = prompt('Digite sua nota');
+        var notadoprofessor = notadepoisdazoacao - 55;
+        alert('Minha nota final: ' + notadoprofessor)
+    </script>
+
+    <h2>Trabalhando com elementos</h2>
+    <p id="elemento"> Aqui meu elemento</p>
+
+    <script>
+         document.getElementById('elemento').innerHTML = 100-90;
+    </script>
+
+    <form name="formulario" >
+        <input type="radio" name="habilita" id="habilitado" onclick="Habilitar(1)">Habilitar
+        <input type="radio" name="habilita" id="desabilitado" checked onclick="Habilitar(0)">desabilitado
+        <label for="">Nome</label>
+        <input type="text" name="nome" id="nome" disabled>
+        <button type="button" onclick="Lernome()">Ler nome</button>
+    </form>
+
+    <script>
+        function Habilitar(opcao){
+            if(opcao){
+                document.formulario.nome.disabled = false;
+            }else{
+                document.formulario.nome.disabled =true;
+            }
+        }
+
+        /*ler a informação dentro do input nome e exibir em um alert utilizando um botão*/
+        function lerNome(){
+             var nome3 = document.formulario.nome.value;
+             alert(nome3);
+        }
+
+        /*Utilizando o promt crie um script para receber 4 notas e calcular a média destas notas*/
+    </script>
+</body>
+</html>
